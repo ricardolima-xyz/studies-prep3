@@ -20,3 +20,5 @@ try {
 } catch (PDOException $e) {
     echo "❌ Connection failed: " . $e->getMessage() . PHP_EOL;
 }
+
+file_put_contents('/var/log/myapp/app.log', "Log entry at " . date('c') . PHP_EOL, FILE_APPEND);

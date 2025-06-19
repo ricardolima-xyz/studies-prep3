@@ -8,6 +8,7 @@ services:
     container_name: php-app
     volumes:
       - .:/app
+      - logs:/var/log/myapp
     depends_on:
       - db
     networks:
@@ -33,3 +34,4 @@ networks:
 
 volumes:
   pgdata:
+  logs:
